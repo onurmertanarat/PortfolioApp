@@ -1,0 +1,312 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<header class="profile container">
+    <i class="ri-moon-line change-theme" id="theme-button"></i>
+    <div class="profile__container grid">
+        <div class="profile__data">
+            <div class="profile__border">
+                <div class="profile__perfil">
+                    <img src="{% static 'index_app/images/bio1.png' %}" alt="">
+                </div>
+            </div>
+            <h2 class="profile__name">Onur Mert Anarat</h2>
+            <h3 class="profile__profession">Python Developer</h3>
+            <ul class="profile__social">
+                <a href="https://www.linkedin.com/in/onurmertanarat" target="_blank" class="profile__social-link">
+                    <i class="ri-linkedin-box-line"></i>
+                </a>
+                <a href="https://github.com/onurmertanarat" target="_blank" class="profile__social-link">
+                    <i class="ri-github-line"></i>
+                </a>
+            </ul>
+        </div>
+
+        <div class="profile__buttons">
+            <a download="" href="{% static 'index_app/documents/Onur_Mert_Anarat_CV.pdf' %}" class="button">
+                Download CV <i class="ri-download-line"></i>
+            </a>
+            <div class="profile__buttons-small">
+                <a href="https://api.whatsapp.com/send?phone=+905512321844&text= " target="_blank"
+                    class="button button__small button__gray">
+                    <i class="ri-whatsapp-line"></i>
+                </a>
+                <a href="https://t.me/onurmertanarat" target="_blank" class="button button__small button__gray">
+                    <i class="ri-telegram-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="filters container">
+
+        <ul class="filters__content">
+            <button class="filters__button filter-tab-active" data-target="#skills">
+                Skills
+            </button>
+            <button class="filters__button" data-target="#projects">
+                Projects
+            </button>
+        </ul>
+
+        <div class="filters__section">
+            <div class="skills__content grid filters__active" data-content id="skills">
+                <div class="skills__area" style="border: 1px solid cornflowerblue; border-radius: 0.75rem;">
+                    <h3 class="skills__title">
+                        Front-end Developer
+                    </h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        HTML
+                                    </h3>
+                                    <span class="skills__level">
+                                        Basic
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Bootstrap
+                                    </h3>
+                                    <span class="skills__level">
+                                        Basic
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        React
+                                    </h3>
+                                    <span class="skills__level">
+                                        Basic
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        CSS
+                                    </h3>
+                                    <span class="skills__level">
+                                        Basic
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        JavaScript
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Vizrt
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__area" style="border: 1px solid cornflowerblue; border-radius: 0.75rem;">
+                    <h3 class="skills__title">
+                        Back-end Developer
+                    </h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Python
+                                    </h3>
+                                    <span class="skills__level">
+                                        Advanced
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        VBScript
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        C++
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Django
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        MSSQL
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Git
+                                    </h3>
+                                    <span class="skills__level">
+                                        Intermediate
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills__content grid" data-content id="projects">
+                <div class="skills__area" style="border: 1px solid cornflowerblue; border-radius: 0.75rem;">
+                    <h3 class="skills__title">
+                        Web Applications
+                    </h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        2023 Turkish Presidential Elections
+                                    </h3>
+                                    <span class="skills__level">
+                                        Parliament scenes were coded front end with Vizrt and back end with VBScript.
+                                    </span>
+                                    <br>
+                                    <span class="skills__level">
+                                        <a href="https://github.com/onurmertanarat/secim-2023"
+                                            target="_blank">Github</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Subdomain Lister
+                                    </h3>
+                                    <span class="skills__level">
+                                        Find subdomains of a website via Threading
+                                    </span>
+                                    <br>
+                                    <span class="skills__level">
+                                        <a href="https://github.com/onurmertanarat/SubdomainLister"
+                                            target="_blank">Github</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="skills__area" style="border: 1px solid cornflowerblue; border-radius: 0.75rem;">
+                    <h3 class="skills__title">
+                        Desktop Applications
+                    </h3>
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Image Processing-Color Detection
+                                    </h3>
+                                    <span class="skills__level">
+                                        Color detection was coded with C#. Hardware control of the axes was coded with
+                                        Arduino.
+                                    </span>
+                                    <br>
+                                    <span class="skills__level">
+                                        <a href="https://github.com/onurmertanarat/imageProcessingProjects1_2_CSharp"
+                                            target="_blank">Github</a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <i class="ri-checkbox-circle-line"></i>
+                                <div>
+                                    <h3 class="skills__name">
+                                        Set Printers Via Shortcuts
+                                    </h3>
+                                    <span class="skills__level">
+                                        Manage multiple printers on your network with the shortcuts you specify.
+                                    </span>
+                                    <br>
+                                    <span class="skills__level">
+                                        <a href="https://github.com/onurmertanarat/set_default_printers"
+                                            target="_blank">Github</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}

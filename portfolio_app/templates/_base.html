@@ -1,0 +1,38 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index_app/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-...SdvnW5cR5jOaD7N4Dd/7ptf5z9CvJdPJOi9BE5i5fP1EQ7ECD1+9G0RBRonXjbz…vJ20kL8gboAL9Z/BHYZ0EyvWSM5uoMjDX5g15na9nWgfuwKcBy6U/mQSbC4M"
+        crossorigin="anonymous" />
+    <title>Onur Mert Anarat </title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'index_app:contact_me' %}">Contact</a></li>
+            <li><a href="#">FUTURE</a></li>
+        </ul>
+    </nav>
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 mertanarat.com | All rigths reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'index_app/main.js' %}"></script>
+</body>
+
+</html>

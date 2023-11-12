@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div style="text-align: center;">
+    <div class="contact-img" style="text-align: center; margin-top: 20px;">
+        <img style="width: 180px;" src="{% static 'index_app/images/img1.png' %}" alt="">
+    </div>
+
+    <h2 style="margin-top: 20px;">Contact Me</h2>
+    <h4>I'll be glad to answer your questions!</h4>
+
+    <form action="{% url 'index_app:contact_me' %}" method="post" style="margin-top: 10px;">
+        {% csrf_token %}
+        <div class="skills__title">
+            <h3>{{form.name}}</h3>
+
+            <h3>{{form.email}}</h3>
+
+            <h3>{{form.subject}}</h3>
+
+            <h3>{{form.message}}</h3>
+        </div>
+        <button class="send-button" type="submit"
+            style="padding: 8px 16px; background-color: #0095ff; color: white; font-family: 'Poppins', sans-serif; border: none; border-radius: .55rem; cursor: pointer; font-size: medium;">Send
+            Message</button>
+    </form>
+
+    <div class="social-icons">
+        <a href="https://www.youtube.com/@onurmertanarat/playlists" target="_blank" class="social-icon"><i
+                class="fab fa-google"></i></a>
+        <a href="https://github.com/onurmertanarat" target="_blank" class="social-icon"><i
+                class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/onurmertanarat/" target="_blank" class="social-icon"><i
+                class="fab fa-linkedin"></i></a>
+    </div>
+</div>
+
+{% endblock content %}
