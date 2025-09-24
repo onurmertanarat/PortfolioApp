@@ -1,40 +1,101 @@
-<h1>Portfolio App</h1>
-    
-<p>Portfolio App is a portfolio website built using Python with the Django framework. This application allows users to create and publish their own portfolios.</p>
-    
-<h2>Overview</h2>
-    
-<h3><code>index_app</code> Folder</h3>
-<ul>
-    <li><strong>admin.py:</strong> Registration of models for the Django admin panel.</li>
-    <li><strong>apps.py:</strong> Application configuration.</li>
-    <li><strong>forms.py:</strong> Definition of form classes.</li>
-    <li><strong>models.py:</strong> Definition of database models.</li>
-    <li><strong>tests.py:</strong> Application tests.</li>
-    <li><strong>urls.py:</strong> Specification of URL routing.</li>
-    <li><strong>views.py:</strong> Definition of views.</li>
-</ul>
-    
-<h3><code>portfolio_app</code> Folder</h3>
-<ul>
-    <li><strong>settings.py:</strong> Configuration settings for the Django project.</li>
-    <li><strong>urls.py:</strong> Project URL configuration.</li>
-</ul>
-    
-<h3><code>templates</code> Folder</h3>
-<ul>
-    <li><strong>_base.html:</strong> Base HTML template file.</li>
-</ul>
-    
-<h2>Installation</h2>
-<ol>
-    <li>Make sure Python and Django are installed.</li>
-    <li>Clone the project: <code>git clone https://github.com/username/project.git</code></li>
-    <li>Navigate to the project directory: <code>cd project</code></li>
-    <li>Install required dependencies: <code>pip install -r requirements.txt</code></li>
-    <li>Create the database: <code>python manage.py migrate</code></li>
-    <li>Run the server: <code>python manage.py runserver</code></li>
-</ol>
-    
-<h2>Contributing</h2>
-<p>If you would like to contribute, please open an issue or submit a pull request. Your constructive contributions are welcome!</p>
+# Dynamic Portfolio with Django
+
+This repository contains the source code for a dynamic portfolio application built with Python and the Django framework. Unlike a static website, this project serves all portfolio content from a database and allows for easy management of projects through the Django admin panel.
+
+---
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><strong>Frontend View</strong></td>
+    <td width="50%"><strong>Django Admin Panel</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/onurmertanarat/PortfolioApp/blob/main/portfolio_app/docs/images/portfolioapp-screenshot-1.PNG" alt="Portfolio Frontend View"></td>
+    <td><img src="https://github.com/onurmertanarat/PortfolioApp/blob/main/portfolio_app/docs/images/portfolioapp-screenshot-3.PNG" alt="Django Admin Panel"></td>
+  </tr>
+</table>
+
+---
+
+## Features
+
+* **Dynamic Content Management:** All projects are stored in a database and rendered dynamically in the templates. No hardcoded project information.
+* **Admin Panel Integration:** Projects can be easily created, updated, and deleted through Django's built-in admin interface without touching the code.
+* **Secure Configuration:** Sensitive information such as the `SECRET_KEY` and `DEBUG` settings are kept separate from the source code and managed via environment variables (`.env` file), following security best practices.
+* **Media File Handling:** Properly configured to handle user-uploaded images for each portfolio project.
+
+---
+
+## Technology Stack
+
+* **Backend:** Python, Django
+* **Database:** SQLite (Default)
+* **Frontend:** HTML, CSS, JavaScript
+* **Python Libraries:**
+    * `Pillow`: For image processing and handling `ImageField`.
+    * `python-decouple`: For separating settings from source code.
+    * `django-cleanup`: To automatically delete old image files.
+
+---
+
+## Local Setup and Installation
+
+To run this project on your local machine, please follow these steps:
+
+1.  **Clone the Repository**
+    ```sh
+    git clone [https://github.com/onurmertanarat/PortfolioApp.git](https://github.com/onurmertanarat/PortfolioApp.git)
+    cd PortfolioApp
+    ```
+
+2.  **Create and Activate a Virtual Environment**
+    ```sh
+    # Create venv
+    python -m venv venv
+
+    # Activate on Windows
+    venv\Scripts\activate
+
+    # Activate on macOS/Linux
+    source venv/bin/activate
+    ```
+
+3.  **Create a `.env` File**
+    Create a `.env` file in the root directory and add the following, using your own secret key.
+    ```env
+    SECRET_KEY='your-own-secret-key-here'
+    DEBUG=True
+    ```
+
+4.  **Install Dependencies**
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+5.  **Apply Database Migrations**
+    ```sh
+    python manage.py migrate
+    ```
+
+6.  **Create a Superuser**
+    This will allow you to log in to the admin panel.
+    ```sh
+    python manage.py createsuperuser
+    ```
+
+7.  **Run the Development Server**
+    ```sh
+    python manage.py runserver
+    ```
+    The application will be available at `http://120.0.0.1:8000/`.
+    The admin panel will be at `http://120.0.0.1:8000/admin/`.
+
+---
+
+## Contact
+
+Onur Mert Anarat
+
+[linkedin.com/in/onurmertanarat](https://www.linkedin.com/in/onurmertanarat)
